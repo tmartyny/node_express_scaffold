@@ -2,20 +2,29 @@
   //example:
   // customJsFile = require('./lib/customJsFile.js');
 
-var express = require('express');
+var   express = require('express')
+    , credentials = require('credentials.js')
+    , http = require('http')
+    , https = require('https')
+    , formidable = require('formidable')
+    , Q = require('q');
+
+var app = express();
 
 var handlebars = require('express-handlebars').create({
   defaultLayout:'main',
   helpers: {
     section: function(name, options){
       if(!this._sections) this._sections = {};
-      this._sections[name] = options.fv(this);
+      this._sections[name] = options.fn(this);
       return null;
+    },
+    static: function(name) {
+      return require('./lib/static.js').map(name);
     }
   }
 });
 
-var credentials = require('credentials.js');
 
 // engines //
 
