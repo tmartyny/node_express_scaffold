@@ -3,11 +3,12 @@
   // customJsFile = require('./lib/customJsFile.js');
 
 var   express = require('express')
-    , credentials = require('credentials.js')
+    , credentials = require('./credentials.js')
     , http = require('http')
     , https = require('https')
     , formidable = require('formidable')
-    , Q = require('q');
+    , Q = require('q')
+    , mongoose = require('mongoose');
 
 var app = express();
 
