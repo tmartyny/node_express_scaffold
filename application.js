@@ -34,7 +34,6 @@ app.set('port', process.env.PORT || 3000);
 // set location of assets //
 app.use(express.static('public'));
 
-
 // mount middleware //
   // example:
   // app.use(function(req, res, next){
