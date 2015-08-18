@@ -44,6 +44,22 @@ app.use(express.static('public'));
   //  next();
   // });
 
+// connect to database
+var opts = {
+  server: {
+    socketOptions: { keepAlive: 1 }
+  }
+};
+switch(app.get('env')){
+  case 'development':
+    mongoose.connect(credentials.mongo.development.connectionString, opts);
+    break;
+  case 'production':
+    mongoose.connect(credentials.mongo.production.connectionString, opts);
+    break;
+  default:
+    throw new Error('Unknown execution environment: ' + app.get('env'));
+}
 // error handling //
 app.use(function(req, res, next){
   res.status(404).render('404');
