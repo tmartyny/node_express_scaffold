@@ -1,0 +1,52 @@
+{
+  "name": "scaffold",
+  "version": "1.0.0",
+  "description": "Node/Express/Handlebars scaffold",
+  "main": "application.js",
+  "scripts": {
+    "test": "vows --spec --isolate",
+    "start": "nodemon application.js"
+  },
+  "author": "Teresa",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "connect": "^2.30.2",
+    "connect-rest": "^1.9.5",
+    "cookie-parser": "^1.3.5",
+    "cors": "^2.7.1",
+    "csurf": "^1.8.3",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "express-logger": "0.0.3",
+    "express-session": "^1.11.3",
+    "formidable": "^1.0.17",
+    "loadtest": "^1.2.11",
+    "mongoose": "^3.8.35",
+    "morgan": "^1.6.1",
+    "nodemailer": "^1.4.0",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "passport-google-oauth": "^0.2.0",
+    "q": "^1.4.1",
+    "response-time": "^2.3.1",
+    "session-mongoose": "^0.5.2",
+    "vhost": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "grunt": "^0.4.5",
+    "grunt-cafe-mocha": "^0.1.13",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-hashres": "^0.4.1",
+    "grunt-lint-pattern": "^0.1.4",
+    "mocha": "^2.2.5",
+    "restler": "^3.3.0",
+    "zombie": "^3.1.1"
+  }
+}
