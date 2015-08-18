@@ -33,12 +33,6 @@ app.use(express.static('public'));
   //  next();
   // });
 
-// routes //
-  // example:
-  // app.get('/path', function(req, res){
-  //  res.render('path')
-  // });
-
 // error handling //
 app.use(function(req, res, next){
   res.status(404).render('404');
