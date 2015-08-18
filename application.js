@@ -1,4 +1,4 @@
-// requir //
+// require //
   //example:
   // customJsFile = require('./lib/customJsFile.js');
 
@@ -15,6 +15,8 @@ var handlebars = require('express-handlebars').create({
   }
 });
 
+var credentials = require('credentials.js');
+
 // engines //
 
 // set port //
@@ -22,6 +24,7 @@ app.set('port', process.env.PORT || 3000);
 
 // set location of assets //
 app.use(express.static('public'));
+
 
 // mount middleware //
   // example:
