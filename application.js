@@ -2,8 +2,11 @@
   //example:
   // customJsFile = require('./lib/customJsFile.js');
 
+// require custom js files 
+var credentials = require('./credentials.js');
+ 
+// require dependencies
 var   express = require('express')
-    , credentials = require('./credentials.js')
     , http = require('http')
     , https = require('https')
     , formidable = require('formidable')
