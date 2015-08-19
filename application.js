@@ -41,11 +41,12 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static('public'));
 
 // mount middleware //
-  // example:
-  // app.use(function(req, res, next){
-  //  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
-  //  next();
-  // });
+
+// tests
+app.use(function(req, res, next){
+  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+  next();
+});
 
 // connect to database
 var opts = {
