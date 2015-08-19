@@ -6,12 +6,12 @@
 var credentials = require('./credentials.js');
  
 // require dependencies
-var   express = require('express')
-    , http = require('http')
-    , https = require('https')
-    , formidable = require('formidable')
-    , Q = require('q')
-    , mongoose = require('mongoose');
+var   express = require('express'),
+    http = require('http'),
+    https = require('https'),
+    formidable = require('formidable'),
+    Q = require('q'),
+    mongoose = require('mongoose');
 
 var app = express();
 
