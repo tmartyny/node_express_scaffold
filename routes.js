@@ -3,5 +3,5 @@
 var main = require('./handlers/main.js');
 
 module.exports = function(app){
-  app.get('/path', main.path);
+  app.get('/', main.home);
 };
