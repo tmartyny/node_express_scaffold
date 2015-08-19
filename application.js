@@ -29,7 +29,6 @@ var handlebars = require('express-handlebars').create({
   }
 });
 
-
 // engines //
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -64,6 +63,10 @@ switch(app.get('env')){
   default:
     throw new Error('Unknown execution environment: ' + app.get('env'));
 }
+
+//require routes
+var routes = require('./routes.js')(app);
+
 // error handling //
 app.use(function(req, res, next){
   res.status(404).render('404');
