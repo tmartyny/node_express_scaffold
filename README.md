@@ -1,4 +1,4 @@
-This is a scaffold template in progress that I am building as I learn Node/Express.
+This is a scaffold template in progress that I am playing with  as I learn Node/Express via Ethan Brown's Web Development with Node and Express.
 
 run tests: `grunt`
 
